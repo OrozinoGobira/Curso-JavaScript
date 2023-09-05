@@ -1,20 +1,22 @@
-function carregar ()  {
+function carregar (){
   var msg = window.document.getElementById ('msg')
   var img = window.document.getElementById ('imagem')
-  var data = new Date ()
-  var hora = data.getHours ()
-  msg.innerHTML =` Agora são ${hora} horas`
-   if (hora >= 0  && hora <=12){
-      img.src='fotomanhã.jpg'
-   }
-   else if (hora >=13 && hora <= 17){
-    img.src='fototarde.jpg'
-   }  
-   else if (hora >=18 && hora <= 23){
-    img.src='fotonoite.jpg'
-   }
+  var agora = new Date ()
+  var hora = agora.getHours ()
+  msg.innerHTML =`Agora são exatamente ${hora} horas`
+  if (hora < 12) {
+    img.src="fotomanhã.jpg"
+    document.body.style.background="#FCDC97"
+  } else if (hora <= 18){
+    img.src="fototarde.jpg"
+    document.body.style.background="#ECA57D"
+  } else if (hora <= 23){
+    img.src="fotonoite.jpg"
+    document.body.style.background="#2C5C94"
+  }
    else {
-    msg.innerHTML=`[ERRO] hora incorreta`
-    
+    msg.innerHTML=`[ERRO]Hora invalida`
    }
+ 
+
 }

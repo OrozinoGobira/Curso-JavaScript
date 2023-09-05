@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Sala de imigração</h1>
+    Pais de Origem:
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="carregando ()">
+    <div id="res">
+        resultado
+    </div>
+    <script>
+    function carregando () {
+        var txp = window.document.getElementById ('pais')
+       var country =  (txp.value)
+       var res = window.document.getElementById ('res')
+       if (country == 'Brasil') {
+        res.innerHTML= `Você é ${country}`
+       } else {
+        res.innerHTML =`Você é estrangeira, seja bem vinda!`
+       }
+    }
+    </script>
+</body>
+</html>

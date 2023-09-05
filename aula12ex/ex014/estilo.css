@@ -1,32 +1,29 @@
-@charset "UTF-8";
 body {
-  font: Normal 15pt Arial;
-  background-color: gray;
+  background-color: rgba(70,142, 236);
+  font: normal 18pt Arial;
+  text-align: center;
 }
-header{
- text-align: center;
- color:white;
+header {
+    color: white;
 }
-section { 
-   background-color:white;
-   width: 500px;
-   border-radius: 10px;
-   padding: 10px;
-   text-align: center;
-   margin: auto;
-   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.407);
-   
+section {
+ background-color: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.345);
+    }
+footer{
+color: white;
+text-align: center;
+font-style: italic;
 }
-div#foto {
-   padding: 20px;
 
-}
- #imagem {
-    border-radius: 50%;
-   width: 250px;
-   height: 250px;
-}
-footer {
-   color: white;
- text-align: center;
+img {
+  display: flex;
+ margin:  20px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }

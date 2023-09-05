@@ -6,25 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
-    velocidade do carro:
-    <input type="number" name="txtvel" id="txtvel">
-    km/h
-   <input type="button" value="verificando" onclick="calculando ()">
-   <div id="res">
-    resultado:
-   </div>
-   <script>
-     function calculando () {
-        var tx = window.document.getElementById ('txtvel')
-        var res = window.document.getElementById ('res')
-        var vel = Number (tx.value)
-        res.innerHTML = `<p>Sua velocidade atual do carro é ${vel}km/h</p>`
-        if(vel > 80) {
-            res.innerHTML = `Você ultrapassou a velocidade permitada. MULTADO`
-        }
-        res.innerHTML += `<p>Dirija com cuidado</p>`
-     }
-   </script>
+    <h1>Sistema de Multas</h1> 
+    Velocidade
+    <input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="verificador" onclick="verificar ()">
+    <div id="res">
+        resultado
+    </div>
+    <script>
+    var txtv = window.document.getElementById ('txtvel')       
+       function verificar (){
+    var res = window.document.querySelector ('#res')
+    var vel = Number (txtv.value)
+    
+    res.innerHTML =`A velocidade do carro é de <strong>${vel} km/h</strong> <br>`
+    if (vel > 80) {
+        res.innerHTML +=`Você atingiu a velocidade maxima permitida.MULTADO`
+    } 
+    res.innerHTML +=` <br> Dirija com cuidado!`
+    } 
+ 
+    </script>
 </body>
 </html>
